@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="{{ url_for('static', filename='pics/' + 'cez.png') }}" type="image/x-icon">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    {% if title %}
+    <title>CEZ - {{ title }}</title>
+    {% else %}
+    <title> CEZ</title> 
+    {% endif %}
+</head>
+
+<body>
+    <style>
+        img {
+            width: 65px;
+            height: 40px; 
+        }
+    </style>
+    <header class="site-header">
+        <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+            <div class="container">
+                <a class="navbar-brand mr-4" href="/">
+                     <img class="rounded-circle" src="{{ url_for('static', filename='pics/' + 'cez.png') }}" type="image/x-icon"></img>C E Z</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarToggle">
+                    <div class="navbar-nav mr-auto">
+                        
+
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Menu</button>
+                        <ul class="dropdown-menu">
+                          <li><a class="nav-item nav-link" href="{{ url_for('check_weather') }}">Check Weather</a></li>
+                          
+                          <li><a class="nav-item nav-link" href="{{ url_for('home') }}">Home</a></li>
+                          <li><a class="nav-item nav-link" href="{{ url_for('contact') }}">Contact</a></li>
+                          <li><a class="nav-item nav-link" href="{{ url_for('covid') }}">COVID</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Navbar Right Side -->
+                    <div class="navbar-nav">
+                        <div class="dropdown">
+                            <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown"><img class="rounded-circle" src="{{ url_for('static', filename='pics/' + 'cez.png') }}">
+                          </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="nav-item nav-link" href="{{ url_for('verify_mob') }}">Verify Mobile</a></li>
+                              <li><a class="nav-item nav-link" href="{{ url_for('semail') }}">Send Email</a></li>
+                              <li><a class="nav-item nav-link" href="#">Logout</a></li>
+                            </ul>
+                          </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main role="main" class="container">
+        <div class="row">
+            <div class="col-md-8">
+                {% with messages = get_flashed_messages(with_categories=true) %} {% if messages %} {% for category, message in messages %}                                      
+                <div class="alert alert-{{ category }}">
+                    {{ message }}
+                </div>
+                {% endfor %} {% endif %} {% endwith %} {% block content %}{% endblock %}
+            </div>
+            <div class="col-md-4">
+                <div class="content-section">
+                    <h3>My Profiles</h3><br>
+                    <p class='text-muted'>
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-light"><a class='folink nav-link' href="https://www.youtube.com/creativeexpertz" target="_blank" rel="noopener noreferrer">My Channel</a></li>
+                            <li class="list-group-item list-group-item-light"><a class='folink nav-link' href="https://github.com/shivam907" target="_blank" rel="noopener noreferrer">My Github</a></li>
+                            <li class="list-group-item list-group-item-light"><a class='folink nav-link' href="https://cez.co.in" target="_blank" rel="noopener noreferrer">My Website</a></li>
+                            <li class="list-group-item list-group-item-light"><a class='folink nav-link' href="https://techiecoder.com" target="_blank" rel="noopener noreferrer">Second Website</a></li>
+                        </ul>
+                    </p>
+                    <br>
+                    <p class='text-muted'>
+                        <h3>Contact us</h3><br>
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-light"><a class='folink nav-link' href="{{ url_for('contact') }}" target="_blank" rel="noopener noreferrer">Submit Query</a></li>
+                            <li class="list-group-item list-group-item-light"><a class='folink nav-link' href="http://wa.me/918146159929" target="_blank" rel="noopener noreferrer">Whatsapp</a></li>
+                            <li class="list-group-item list-group-item-light"><a class='folink nav-link' href="mailto:shivam@ceziot.com" target="_blank" rel="noopener noreferrer">Email</a></li>
+                            <li class="list-group-item list-group-item-light"><a class='folink nav-link' href="https://instagram.com/creativeexpertz" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+<br>
+<br>
+<br>
+
+<!-- FOOTER  -->
+    <footer class="page-footer font-small blue" style="background-color: #5f788a">
+        <div class="footer-copyright text-center py-3 fot">© 2021 Copyright:
+            <a class="fotlink" href="https://ceziot.com/" target="_blank" rel="noopener noreferrer"> C E Z </a>
+        </div>
+    </footer>
+<!-- FOOTER -->
+
+<!-- BOOTSTRAP -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- BOOTSTRAP -->
+
+</body>
+</html>
