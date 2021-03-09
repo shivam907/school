@@ -74,18 +74,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #cbd5db;
 }
 
-.foolink {
-  color: #000000;
-}
-
-.foolink:hover {
-  color:#a5a5a5;
-} 
-
-.foolink.active {
-  font-weight: 500;
-}
-
 .folink.active {
   font-weight: 500;
 }
