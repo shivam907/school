@@ -7,16 +7,13 @@
             <legend class="border-bottom mb-4">{{ legend }}</legend>
             <div class="form-group">
                 {{ form.city.label(class="form-control-label") }}
-                    {{ form.city(class="form-control form-control-lg") }}
+                {{ form.city(class="form-control form-control-lg") }}
             </div> 
-            
-            
-            
         </fieldset>
         <div class="form-group">
             {{ form.submit(class="btn btn-outline-info") }}<br><br>
             <legend class="border-bottom mb-4">Temperature at <b>{{city}}</b>  is  <b>{{ c }}°C</b></legend>
         </div>
     </form>
-    </div>
+</div>
 {% endblock content %}

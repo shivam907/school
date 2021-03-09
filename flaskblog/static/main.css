@@ -1,170 +1,101 @@
 body {
-    background: #fafafa;
-    color: #333333;
-    margin-top: 5rem;
-  }
+  background: #fafafa;
+  color: #333333;
+  margin-top: 5rem;
+}
   
   
-  .dropbtn {
-    background-color: black;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: lightgrey;
-    min-width: 200px;
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {background-color: white;}
-  .dropdown:hover .dropdown-content {display: block;}
-  .dropdown:hover .dropbtn {background-color: grey;}
-  
-  
-  h1, h2, h3, h4, h5, h6 {
-    color: #444444;
-  }
-  
-  .bg-steel {
-    background-color: #5f788a;
-  }
-  
-  .site-header .navbar-nav .nav-link {
-    color: #0d1418;
-  }
-  
-  .site-header .navbar-nav .nav-link:hover {
-    color: #13b9e2;
-  }
-  
-  .weather {
-    color: #050505;
-  }
-  
-  
-  .weather:hover {
-    color: #08a4ff;
-  }
-  
-  .weather.active {
-    font-weight: 500;
-  }
-  
-  .site-header .navbar-nav .nav-link.active {
-    font-weight: 500;
-  }
-  
-  .content-section {
-    background: #ffffff;
-    padding: 10px 20px;
-    border: 1px solid #dddddd;
-    border-radius: 3px;
-    margin-bottom: 20px;
-  }
-  
-  .article-title {
-    color: #444444;
-  }
-  
-  a.article-title:hover {
-    color: #428bca;
-    text-decoration: none;
-  }
-  
-  .article-content {
-    white-space: pre-line;
-  }
-  
-  .article-img {
-    height: 65px;
-    width: 65px;
-    margin-right: 16px;
-  }
-  
-  .article-metadata {
-    padding-bottom: 1px;
-    margin-left: 4px;
-    border-bottom: 1px solid #e3e3e3
-  }
-  
-  .article-metadata a:hover {
-    color: #333;
-    text-decoration: none;
-  }
-  
-  .article-svg {
-    width: 25px;
-    height: 25px;
-    vertical-align: middle;
-  }
-  
-  .account-img {
-    height: 125px;
-    width: 125px;
-    margin-right: 20px;
-    margin-bottom: 16px;
-  }
-  
-  .account-heading {
-    font-size: 2.5rem;
-  }
-  
-  .fot {
-    color: #cbd5db;
-  }
-  
-  .fotlink {
-    color: #cbd5db;
-  }
-  
-  .foolink {
-    color: #000000;
-  }
-  
-  .foolink:hover {
-    color:#a5a5a5;
-  } 
-  
-  .foolink.active {
-    font-weight: 500;
-  }
-  
-  .folink.active {
-    font-weight: 500;
-  }
-  
-  .fotlink:hover {
-    color: #ffffff;
-  }
-  
-  .share {
-    margin-right: 5px;
-    text-align: right;
-  }
-  
-  .im {
-    width: 40px;
-    height: 40px;
-  }
+.dropbtn {
+  background-color: black;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
 
-  img {
-    width: 65px;
-    height: 40px; 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: lightgrey;
+  min-width: 200px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: white;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: grey;}
+
+
+h1, h2, h3, h4, h5, h6 {
+  color: #444444;
+}
+
+.bg-steel {
+  background-color: #5f788a;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #0d1418;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #13b9e2;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.fot {
+  color: #cbd5db;
+}
+
+.fotlink {
+  color: #cbd5db;
+}
+
+.foolink {
+  color: #000000;
+}
+
+.foolink:hover {
+  color:#a5a5a5;
+} 
+
+.foolink.active {
+  font-weight: 500;
+}
+
+.folink.active {
+  font-weight: 500;
+}
+
+.fotlink:hover {
+  color: #ffffff;
+}
+
+
+img {
+  width: 65px;
+  height: 40px; 
 }

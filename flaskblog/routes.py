@@ -31,12 +31,12 @@ def check_weather():
 
 @app.route("/covid", methods=['GET', 'POST'])
 def covid():
-    url = "https://api.covid19india.org/data.json"   #Using API to Get Data
+    url = "https://api.covid19india.org/data.json"
     r = requests.request('GET', url)
     d = r.json()
     b=d['cases_time_series']
     a=len(b)
-    return render_template('covid.html', title='COVID19', Today_New_Cases=b[a-1]['totalconfirmed'])
+    return render_template('covid.html', title='COVID19', Totall_Cases=b[a-1]['totalconfirmed'])
 
 
 @app.route("/contact")

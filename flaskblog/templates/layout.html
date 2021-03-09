@@ -19,36 +19,24 @@
 </head>
 
 <body>
-    <style>
-        img {
-            width: 65px;
-            height: 40px; 
-        }
-    </style>
     <header class="site-header">
         <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
             <div class="container">
-                <a class="navbar-brand mr-4" href="/">
-                     <img class="rounded-circle" src="{{ url_for('static', filename='pics/' + 'cez.png') }}" type="image/x-icon"></img>C E Z</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarToggle">
-                    <div class="navbar-nav mr-auto">
-                        
-
+                <div class="collapse navbar-collapse " id="navbarToggle">
+                    <div class="navbar-nav mr-auto"><a class="navbar-brand mr-4" href="/">
+                        <img class="rounded-circle" src="{{ url_for('static', filename='pics/' + 'cez.png') }}" type="image/x-icon"></img>C E Z</a>
                     </div>
                     <div class="dropdown">
                         <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Menu</button>
                         <ul class="dropdown-menu">
-                          <li><a class="nav-item nav-link" href="{{ url_for('check_weather') }}">Check Weather</a></li>
-                          
                           <li><a class="nav-item nav-link" href="{{ url_for('home') }}">Home</a></li>
                           <li><a class="nav-item nav-link" href="{{ url_for('contact') }}">Contact</a></li>
                           <li><a class="nav-item nav-link" href="{{ url_for('covid') }}">COVID</a></li>
                         </ul>
                     </div>
-                    
                     <!-- Navbar Right Side -->
                     <div class="navbar-nav">
                         <div class="dropdown">
@@ -57,10 +45,9 @@
                             <ul class="dropdown-menu">
                               <li><a class="nav-item nav-link" href="{{ url_for('verify_mob') }}">Verify Mobile</a></li>
                               <li><a class="nav-item nav-link" href="{{ url_for('semail') }}">Send Email</a></li>
-                              <li><a class="nav-item nav-link" href="#">Logout</a></li>
+                              <li><a class="nav-item nav-link" href="{{ url_for('check_weather') }}">Check Weather</a></li>
                             </ul>
                           </div>
-                        
                     </div>
                 </div>
             </div>
@@ -99,7 +86,6 @@
                 </div>
             </div>
         </div>
-        
     </main>
 <br>
 <br>
